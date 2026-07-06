@@ -40,6 +40,7 @@ Tutorial contents for MetaboAnalyst:
 | MetaboAnalyst | 6.0 web version |
 
 ## Example Dataset
+For this tutorial, we use a public dataset, Project PXD072757, title Comparative plasma proteomics of COVID-19 and Dengue patients with relevance to cardiovascular-associated pathways, available from https://www.ebi.ac.uk/pride/archive/projects/PXD072757. The dataset contains 14 samples. 
 
 ## Citation
 If you use this tutorial in teaching or workshops, please cite this repository
