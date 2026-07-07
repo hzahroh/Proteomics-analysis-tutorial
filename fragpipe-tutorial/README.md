@@ -1,4 +1,5 @@
 # FragPipe Tutorial
+Welcome to the FragPipe proteomics tutorial!
 
 ## FragPipe General Workflow
 1. Prepare LC-MS/MS RAW files
