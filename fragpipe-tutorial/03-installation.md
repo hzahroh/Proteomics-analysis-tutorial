@@ -125,20 +125,9 @@ Download the required tools:
 1. Open the **Config** tab.
 2. Click **Download/Update** beside the **MSFragger, IonQuant, diaTracer** section.
 3. A license agreement window will appear.
-
-Fill in:
-
-- First name
-- Last name
-- Academic email address
-- Institution
-
-Read and accept the required license agreements, then click **Send Verification Email**.
-
-After receiving the verification email:
-
-1. Open the email and fill in the verification code in FragPipe.
-3. Download will start and FragPipe will detect the downloaded tools automatically.
+4. Fill in and accept the required license agreements, then click **Send Verification Email**.
+5. Open the email and fill in the verification code in FragPipe.
+6. Download will start and FragPipe will detect the downloaded tools automatically.
 
 The configuration is complete when the licence for the tools are no longer showing **N/A**. 
 
@@ -147,6 +136,7 @@ The configuration is complete when the licence for the tools are no longer showi
 > - [MsFragger](https://msfragger.arsci.com/upgrader/)
 > - [IonQuant](https://msfragger.arsci.com/ionquant/)
 > - [diaTracer](https://msfragger-upgrader.nesvilab.org/diatracer/)
+> 
 > After download is complete, point out to the downloaded tools directory on FragPipe to allow FragPipe to detect the tools automatically.
 
 You are now ready to begin processing proteomics data.
@@ -173,7 +163,7 @@ Without Philosopher, FragPipe cannot perform protein inference or false discover
 
 DIA-NN is only required for **DIA** proteomics workflows.
 
-Since this tutorial uses **DDA** data, this warning can generally be ignored.
+Since this tutorial uses **DDA** data, this warning can be ignored.
 
 
 > [!IMPORTANT]
