@@ -81,21 +81,56 @@ FragPipe processes proteomics data in several main steps:
 
 > [!NOTE]
 > FragPipe combines several software packages into a single analysis workflow. In this tutorial, the emphasis is on understanding the workflow and interpreting the results, rather than the computational principles behind each software component. For further details about the individual tools, please refer to the official FragPipe documentation.
+
 ---
 
-# FragPipe Output Files and Quality Checks
+## Step 1. Input Data
+Every FragPipe analysis begins with three types of input:
+LC-MS/MS spectral files (.raw, .mzML, or other supported formats)
+Protein FASTA database
+Sample metadata, including the experimental groups and biological replicates
+Together, these files tell FragPipe what spectra to analyse, which proteins to search, and how the samples are related.
+
+---
+
+## Step 2. Peptide Identification
+The first computational step is identifying peptides.
+MSFragger compares each experimental MS/MS spectrum with theoretical peptide spectra generated from the protein sequences in the FASTA database.
+The result is a list of peptide-spectrum matches (PSMs), where each spectrum is assigned to the peptide sequence that best explains the observed fragmentation pattern.
+At this stage, the matches are still considered candidate identifications and must be validated before they are accepted.
+
+---
+
+## Step 3. Identification Validation
+After the initial database search, FragPipe improves and validates the peptide-spectrum matches.
+This stage includes:
+- MSBooster, which adds predicted peptide features to improve confidence in the matches.
+- Percolator, which rescoring peptide-spectrum matches using machine learning.
+- Philosopher, which applies false discovery rate (FDR) filtering using a target-decoy strategy.
+Only peptide-spectrum matches that pass the selected FDR threshold are retained for downstream analysis.
+
+---
+
+## Step 4. Protein Inference
+Proteins are not identified directly from MS/MS spectra. Instead, FragPipe assembles the validated peptides into protein groups using ProteinProphet.
+Because some peptides may belong to more than one protein, this step determines the protein or protein group that is best supported by the observed peptide evidence.
+
+---
+
+## Step 5. Label-Free Quantification
+Once the proteins have been identified, IonQuant estimates how much of each peptide and protein is present in every sample.
+For the LFQ-MBR workflow used in this tutorial, IonQuant performs:
+- MS1 peak extraction
+- peptide-ion quantification
+- Match Between Runs (MBR)
+- MaxLFQ protein quantification
+The final result is a quantitative protein abundance matrix that can be used for downstream statistical analysis.
+
+---
+
+## Step 6. FragPipe Output Files and Quality Checks
 
 After a successful run, FragPipe generates output tables, configuration files, and log files that summarize the workflow and final results.
-
-The output files may include:
-
-* Workflow execution logs
-* Search parameter files
-* FDR-filtered PSM, ion, peptide, and protein tables
-* Numbers of PSMs, ions, peptides, and proteins passing the filtering cutoff
-* Peptide-level information such as charge state, peptide length, retention time, observed mass, calibrated mass, and mass error
-* Protein-level identification and quantification tables, depending on the selected workflow
-* Processing information recorded in the complete FragPipe log file
 
 Common FragPipe output files include:
 
