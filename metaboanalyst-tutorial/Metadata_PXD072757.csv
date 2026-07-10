@@ -1,0 +1,15 @@
+Sample_ID,Organism,Sample_type,Biological_replicate,Condition,Raw_file
+H1,Homo sapiens,Plasma,1,Healthy,NORMAL.raw
+H2,Homo sapiens,Plasma,2,Healthy,119ZD.raw
+H3,Homo sapiens,Plasma,3,Healthy,TKN4.raw
+H4,Homo sapiens,Plasma,4,Healthy,TKN8.raw
+D1,Homo sapiens,Plasma,1,Dengue,DEN.raw
+D2,Homo sapiens,Plasma,2,Dengue,TKDV1.raw
+D3,Homo sapiens,Plasma,3,Dengue,TKDV4.raw
+D4,Homo sapiens,Plasma,4,Dengue,107ZD.raw
+D5,Homo sapiens,Plasma,5,Dengue,138ZD.raw
+C1,Homo sapiens,Plasma,1,Covid,TKN.raw
+C2,Homo sapiens,Plasma,2,Covid,280_B_2.raw
+C3,Homo sapiens,Plasma,3,Covid,468_6.raw
+C4,Homo sapiens,Plasma,4,Covid,TK3.raw
+C5,Homo sapiens,Plasma,5,Covid,TKN6.raw
