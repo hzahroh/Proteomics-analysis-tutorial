@@ -19,9 +19,7 @@ Welcome to the FragPipe proteomics tutorial!
 5. [Search Parameters](05-search-parameters.md)
 6. [Running FragPipe](06-running-fragpipe.md)
 7. [Output Files](07-output-files.md)
-8. [Quality Control](08-quality-control.md)
-9. [Troubleshooting](09-troubleshooting.md)
-10. [Exercises](10-exercises.md)
+
 
 ## Output Files
 After completing this tutorial, you should obtain
