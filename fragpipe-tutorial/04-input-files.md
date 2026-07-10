@@ -109,7 +109,7 @@ The appropriate database depends on the experiment.
 
 Avoid adding large numbers of unrelated organisms. An unnecessarily large database increases the search space and can reduce the sensitivity of peptide identification.
 
-Common laboratory contaminant sequences, such as keratins and trypsin, should normally also be included.
+Include common laboratory contaminant proteins, such as keratins and trypsin, in the FASTA database to improve peptide identification.
 
 ---
 
@@ -163,6 +163,10 @@ The database composition should be mentioned clearly in the methods section.
 FragPipe can download protein sequences from UniProt through the **Database** tab. Multiple proteomes can be specified using a comma-separated list of UniProt proteome identifiers.
 
 FragPipe recommends UniProt-formatted sequence headers and provides options for adding common contaminants and decoy sequences.
+
+![FragPipe Database Download](../images/Fragpipe-FASTA-Database.png)
+
+**Figure 1.** Downloading a protein FASTA database using the **Database** tab in FragPipe. Users can download reference proteomes directly from UniProt, add common contaminant sequences, and generate decoy sequences for false discovery rate (FDR) estimation. Multiple proteomes can be combined by entering their UniProt proteome identifiers.
 
 How to add reference proteome:
 
