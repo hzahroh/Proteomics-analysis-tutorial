@@ -75,9 +75,8 @@ These levels are related, but they are not identical.
 - A protein group is inferred from the available peptide evidence, including unique and shared peptides.
 
 Protein-level results therefore involve protein inference rather than simply adding together all rows from the peptide report.
+
 ---
-
-
 
 # Which File Should I Use?
 
